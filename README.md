@@ -33,13 +33,13 @@
 ## Установка
 
 ```bash
-wget -O /tmp/install.sh https://raw.githubusercontent.com/dedikar/routerich-bcw-manager/main/install.sh && sh /tmp/install.sh
+wget -O /tmp/install.sh https://raw.githubusercontent.com/samara1531/routerich-bcw-manager/main/install.sh && sh /tmp/install.sh
 ```
 
 ## Удаление
 
 ```bash
-wget -O /tmp/uninstall.sh https://raw.githubusercontent.com/dedikar/routerich-bcw-manager/main/uninstall.sh && sh /tmp/uninstall.sh
+wget -O /tmp/uninstall.sh https://raw.githubusercontent.com/samara1531/routerich-bcw-manager/main/uninstall.sh && sh /tmp/uninstall.sh
 ```
 
 ## Использование
