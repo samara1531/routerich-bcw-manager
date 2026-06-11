@@ -72,7 +72,7 @@ cd /tmp || return
 
 printf "${YELLOW}→ Получение информации о последней версии...${NC}\n"
 URL="$(wget -qO- https://api.github.com/repos/rcd27/blockcheckw/releases/latest \
-| jq -r '.assets[] | select(.name | contains("linux-amd64.tar.gz")) | .browser_download_url')"
+| jq -r '.assets[] | select(.name | contains("linux-x86_64.tar.gz")) | .browser_download_url')"
 
 if [ -z "$URL" ]; then
     printf "${RED}${BOLD}Ошибка: не удалось получить ссылку для загрузки.${NC}\n"
@@ -120,9 +120,9 @@ chmod +x /usr/bin/blockcheckw
 printf "${GREEN}✓ Установлено${NC}\n\n"
 
 printf "${YELLOW}→ Настройка окружения...${NC}\n"
-mkdir -p /opt/zapret2/binaries/linux-amd64
+mkdir -p /opt/zapret2/binaries/linux-x86_64
 if [ -f /opt/zapret2/nfq2/nfqws2 ]; then
-    ln -sf /opt/zapret2/nfq2/nfqws2 /opt/zapret2/binaries/linux-amd64/nfqws2
+    ln -sf /opt/zapret2/nfq2/nfqws2 /opt/zapret2/binaries/linux-x86_64/nfqws2
     printf "${GREEN}✓ Симлинк nfqws2 создан${NC}\n"
 fi
 
